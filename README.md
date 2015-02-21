@@ -3,7 +3,7 @@
 > [Yeoman](http://yeoman.io) generator
 
 
-## Getting Started
+## Getting Started with Yeoman
 
 ### What is Yeoman?
 

@@ -1,6 +1,9 @@
 {
-  "name": "package",
+  "name": "<%= appName %>",
   "version": "0.0.0",
-  "dependencies": {}
+  "dependencies": {
+  	"ionic": "driftyco/ionic-bower#1.0.0-beta.14",
+  	"firebase": "~2.1.2"
+  }
 }
 

@@ -1,6 +1,6 @@
-angular.module('pyro.config', [])
+angular.module('config', [])
 
-  .constant('version', '0.0.1')
+  .constant('version', '<%= version %>')
 
   // your Firebase data URL goes here, no trailing slash
   .constant('FBURL', 'ZZ')

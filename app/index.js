@@ -11,6 +11,8 @@ module.exports = yeoman.generators.Base.extend({
     this.appname = this._.camelize(this._.slugify(this._.humanize(this.appname)));
     this.appPath = this.env.options.appPath;
     this.pkg = require('../package.json');
+    this.version = this.pkg.version || "0.0.0";
+
     // this.copyFile = function(args){
     //   return copyFile().apply(this, args);
     // }
@@ -62,16 +64,21 @@ module.exports = yeoman.generators.Base.extend({
   writing: {
     app: function () {
       //Angular is Included
-      this.mkdir('components');
+      this.mkdir('app/components');
+      var context = {
+        appName: this.appname,
+        version: this.version
+      }
+      this.template("_package.json", "package.json", context);
+      this.template("_bower.json", "bower.json", context);
+      this.template("_app-config.js", "app/app-config.js", context);
+
       var filesToCopy = [
-      {src:'_bower.json', dest:'bower.json'}, 
-      {src:'_package.json', dest:'package.json'}, 
-      'app-config.js',
-      'app-controllers.js', 
-      'app.js',
-      'index.html',
+      {src:'app-controllers.js', dest:'app/app-controllers.js'}, 
+      {src:'app.js', dest:'app/app.js'},
+      {src:'index.html', dest:'app/index.html'},
       ];
-      function copyFile (){
+      function copyFiles (){
         for(var i=0; i < arguments.length; i++){
           if(typeof arguments[i] == "object" && arguments[i].hasOwnProperty('src')){
             var destination = arguments[i].dest || arguments[i].src;
@@ -89,7 +96,8 @@ module.exports = yeoman.generators.Base.extend({
           }
         }
       }
-      copyFile.apply(this, filesToCopy);
+      copyFiles.apply(this, filesToCopy);
+
       // if(this.answers.includeIonic){
       //   this.fs.copy(
       //     this.templatePath('app-config.js'),

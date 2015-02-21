@@ -2,12 +2,13 @@
   "name": "generator-fangular",
   "version": "0.0.0",
   "description": "Yeoman generator",
+  "keywords": ["angular", "firebase"],
   "license": "MIT",
   "main": "app/index.js",
   "repository": "prescottprue/generator-fangular",
   "author": {
     "name": "Scott",
-    "email": "",
+    "email": "sprue.dev@gmail.com",
     "url": "https://github.com/prescottprue"
   },
   "engines": {
