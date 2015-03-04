@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title><%= appName %></title>
+    <!-- Font Awesome -->
+    <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> -->
+    <!-- Lato Font -->
+    <!-- <link href='https://fonts.googleapis.com/css?family=Lato:100,300,700' rel='stylesheet' type='text/css'> -->
+    <!-- Ionic CSS -->
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="app-styles.css" rel="stylesheet">
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <!-- Firebase Library -->
+    <script src="https://cdn.firebase.com/js/client/2.0.5/firebase.js"></script>
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+    <!-- bower:css -->
+    <!-- endbower -->
+  </head>
+  <body ng-app="<%= appName %>" animation="slide-left-right-ios7">
+    <div>
+      <ion-nav-bar class="bar-stable">
+        <ion-nav-back-button class="button-icon icon ion-ios7-arrow-back">Back</ion-nav-back-button>
+      </ion-nav-bar>
+      <ion-nav-view></ion-nav-view>
+    </div>
+    <!-- bower:js -->
+    <!-- endbower -->
+    <!-- App Files -->
+    <script src="app.js"></script>
+    <script src="app-controllers.js"></script>
+    <script src="components/landing/landing-controller.js"></script>
+    <script src="components/home/home-controller.js"></script>
+    <script src="components/session/account/account-controller.js"></script>
+    <script src="components/session/signup/signup-controller.js"></script>
+    <script src="components/session/login/login-controller.js"></script>
+    <!-- Live Reload -->
+    <script src="//localhost:35729/livereload.js"></script> 
+
+  </body>
+</html>

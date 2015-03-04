@@ -1,8 +1,10 @@
 {
   "name": "generator-fangular",
   "version": "0.0.0",
-  "description": "Yeoman generator",
-  "keywords": ["angular", "firebase"],
+  "description": "Angular and Firebase generator that includes the option to enable libraries that help build apps with users quickly. One of the optional libraries is an admin/session assistance library I built for use with Firebase called FireAdmin.",
+  "keywords": [
+    "yeoman-generator"
+  ],
   "license": "MIT",
   "main": "app/index.js",
   "repository": "prescottprue/generator-fangular",
@@ -14,18 +16,13 @@
   "engines": {
     "node": ">=0.10.0"
   },
-  "scripts": {
-    "test": "mocha"
-  },
   "files": [
     "app"
   ],
-  "keywords": [
-    "yeoman-generator"
-  ],
   "dependencies": {
-    "yeoman-generator": "^0.18.0",
     "chalk": "^0.5.0",
+    "underscore": "^1.8.2",
+    "yeoman-generator": "^0.18.0",
     "yosay": "^0.3.0"
   },
   "devDependencies": {
